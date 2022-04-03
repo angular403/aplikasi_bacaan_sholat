@@ -1,3 +1,4 @@
+import 'package:aplikasi_bacaan_sholat/pages/ayat_kursi.dart';
 import 'package:aplikasi_bacaan_sholat/pages/bacaan_sholat_page.dart';
 import 'package:aplikasi_bacaan_sholat/pages/niat_sholat_page.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xff44aca0),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -95,7 +96,9 @@ class _MainPageState extends State<MainPage> {
                   child: InkWell(
                     highlightColor: Colors.transparent,
                     splashColor: Colors.transparent,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => AyatKursi()));
+                    },
                     child: Column(
                       children: const [
                         Image(
